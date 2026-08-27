@@ -89,6 +89,35 @@ h1 em { font-family: Georgia, serif; font-weight: 400; }
   overflow: hidden;
   border-radius: 2px;
 }
+
+.portraitPhoto {
+  background: #101827;
+}
+.founderPortrait {
+  width: 100%;
+  height: 100%;
+  min-height: 440px;
+  display: block;
+  object-fit: cover;
+  object-position: 50% 34%;
+  filter: saturate(.88) contrast(1.03);
+  transform: scale(1.002);
+}
+.portraitPhoto::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(5,12,22,.02) 45%, rgba(5,12,22,.28) 100%);
+}
+.portraitPhoto .portraitLabel {
+  z-index: 2;
+  background: rgba(11,18,32,.68);
+  backdrop-filter: blur(8px);
+  padding: 9px 11px;
+  border: 1px solid rgba(255,255,255,.18);
+}
+
 .initials {
   position: absolute;
   left: 5%;
@@ -227,7 +256,7 @@ footer {
   }
   .heroSide { max-width: 620px; margin-top: 35px; }
   .heroVisual { gap: 10px; }
-  .portraitPlaceholder { min-height: 380px; }
+  .portraitPlaceholder, .founderPortrait { min-height: 380px; }
   .statement { min-height: 220px; }
   .aboutGrid, .visionGrid, .connectGrid { gap: 45px; }
   .ventureCard { grid-template-columns: 45px 1fr 30px; }
@@ -242,7 +271,7 @@ footer {
   .heroEyebrow { margin-bottom: 38px; }
   h1 { font-size: clamp(52px, 17vw, 82px); }
   .heroVisual { margin-top: 50px; }
-  .portraitPlaceholder { min-height: 300px; }
+  .portraitPlaceholder, .founderPortrait { min-height: 300px; }
   .ventureCard { gap: 12px; }
   .ventureCard h3 { font-size: 27px; }
   .ventureCard p { font-size: 13px; }

@@ -70,9 +70,13 @@ export default function Home() {
         </div>
 
         <div className="heroVisual">
-          <div className="portraitPlaceholder">
-            <div className="initials">HA</div>
-            <div className="portraitLabel">YOUR PORTRAIT</div>
+          <div className="portraitPlaceholder portraitPhoto">
+            <img
+              src="/haytham-ameen.jpg"
+              alt="Haytham Ameen"
+              className="founderPortrait"
+            />
+            <div className="portraitLabel">HAYTHAM AMEEN · FOUNDER</div>
           </div>
           <div className="statement">
             <span>Based in Yemen.</span>
